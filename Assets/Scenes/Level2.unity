@@ -2213,6 +2213,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114282028300169254, guid: 61628f9c6498afb4da573f5d5bd7f8fd,
+        type: 2}
+      propertyPath: levelToLoad
+      value: EndScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61628f9c6498afb4da573f5d5bd7f8fd, type: 2}
   m_IsPrefabAsset: 0
@@ -2668,11 +2673,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4932470827760118, guid: 406f690fc1d8ff34a9f685d30fb10a49, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.7937148
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4932470827760118, guid: 406f690fc1d8ff34a9f685d30fb10a49, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.59612966
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 4932470827760118, guid: 406f690fc1d8ff34a9f685d30fb10a49, type: 2}
       propertyPath: m_LocalPosition.z
