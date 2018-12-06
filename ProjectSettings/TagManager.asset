@@ -9,6 +9,7 @@ TagManager:
   - InvisibleWall
   - TinyEnemy
   - HPBoost
+  - BigEnemy
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Player
   - PlayerHitDetection
   - Ground
-  - 
-  - 
+  - Slime
+  - Saws
   - 
   - 
   - 

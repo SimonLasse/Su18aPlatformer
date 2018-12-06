@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;// gör så att detta skriptet kan hantera scenerna
+// gör så att detta skriptet kan hantera scenerna
+using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour
 {
-    public string levelToLoad = "SampleScene";//gör en variabel som är en string och säger att "levelToLoad = SampleScene"
+    //gör en variabel som är en string och säger att "levelToLoad = SampleScene"
+    public string levelToLoad = "SampleScene";
 
-    private void OnTriggerEnter2D(Collider2D collision) //när triggern går på gör den detta
+    //när triggern går på gör den detta
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player") //ifall objektet som slog på triggern har taggen "Player"
+        //ifall objektet som slog på triggern har taggen "Player"
+        if (collision.tag == "Player")
         {
-            print("Yay"); //skriv ut "Yay"
-            SceneManager.LoadScene(levelToLoad);//laddar scenen "levelToLoad" vilket skrevs tidigare var "SampleScene"
+            //skriv ut "Yay"
+            print("Yay");
+            //laddar scenen "levelToLoad" vilket e satt som "SampleScene" men som kan ändras i unity
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 }

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int score = 1; //sätter score till 1
+    //skapar och sätter en public int med variabeln "score" till 1
+    public int score = 1;
 
-    private void OnTriggerEnter2D(Collider2D collision) //gör att när trigger går på gör den
+    //gör att när trigger går på gör den
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player") //ifall det som colliderade har tagen player
         {
             //Skapa en temporär variabel "controller" och sätt den till
             //resultatet av sökningen efter objektet med taggen "GameController".
-            GameObject Player= GameObject.FindWithTag("GameController");
+            GameObject Player = GameObject.FindWithTag("GameController");
             if (Player != null)
             {
                 //Skapa en temporär variabel "tracker" och sätt den till
@@ -20,19 +22,24 @@ public class Coin : MonoBehaviour
                 ScoreTracker tracker = Player.GetComponent<ScoreTracker>();
                 if (tracker != null)
                 {
-                    tracker.totalScore += score; //den letar upp "totalscore" och lägger på en
+                    //den letar upp "totalscore" och lägger på en
+                    tracker.totalScore += score;
                 }
+                //om inte
                 else
                 {
-                    Debug.LogError("ScoreTracker saknas på GameController.");//om den inte hittar printar den "ScoreTracker saknas på GameController."
+                    //om den inte hittar printar den "ScoreTracker saknas på GameController."
+                    Debug.LogError("ScoreTracker saknas på GameController.");
                 }
             }
+            //om inte
             else
             {
-                Debug.LogError("GameContoller finns inte.");// om den inte hittar gamecontroller printar den "GameContoller finns inte."
+                // om den inte hittar gamecontroller printar den "GameContoller finns inte."
+                Debug.LogError("GameContoller finns inte.");
             }
-
-            Destroy(gameObject); //gör sönder ett objekt
+            //gör sönder ett objekt
+            Destroy(gameObject);
         }
     }
 }

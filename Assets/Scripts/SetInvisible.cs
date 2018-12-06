@@ -7,6 +7,7 @@ public class SetInvisible : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GetComponent<SpriteRenderer>().enabled = false; //stänger av SpriteRenderern
+        //stänger av SpriteRenderern
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }

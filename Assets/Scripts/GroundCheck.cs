@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    public int touches; //skapar en public int med variabeln touches
+    //skapar en public int med variabeln touches
+    public int touches;
 
-    private void OnTriggerEnter2D(Collider2D collision) //när den nuddar en  trigger gör den
+    //när den nuddar en  trigger gör den
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        touches++; //lägg plus en från touches
+        //lägg plus en på touches
+        touches++;
     }
 
-    private void OnTriggerExit2D(Collider2D collision) //när den slutar nudda en trigger
+    //när den slutar nudda en trigger
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        touches--; //ta bort en från touches
+        //ta bort en på touches
+        touches--;
     }
 }

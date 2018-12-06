@@ -2,39 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HPBoost : MonoBehaviour {
-    private PlayerHealth PH;
+public class HPBoost : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+
+    //om ngt kolliderar med den går den in hit
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player");
+        //har objektet som kolliderade taggen "Player"
+        if (collision.gameObject.tag == "Player") ;
         {
+            //Skapa en temporär variabel "controller" som ska leta efter komponenten "PlayerHealth"
+            //ifall controllern inte är noll(ifall den hittar ngt)
             GameObject controller = GameObject.FindWithTag("Player");
             if (controller != null)
             {
+                //Skapa en temporär variabel "tracker" som ska leta efter komponenten "PlayerHealth"
+                //ifall trackern inte är noll(ifall den hittar ngt)
                 PlayerHealth tracker = controller.GetComponent<PlayerHealth>();
                 if (tracker != null)
                 {
+                    //gör negativt 25 "DealDamage"
                     tracker.DealDamage(-25);
 
                 }
+                //om inte
                 else
                 {
-                    Debug.LogError("");
+                    //printa "oh no"
+                    Debug.LogError("oh no");
                 }
             }
-                else
-                {
-                    Debug.LogError("");
-                }
+            //om inte
+            else
+            {
+                //printa "oh no"
+                Debug.LogError("oh no");
+            }
+            //förstör spel objektet
             Destroy(gameObject);
         }
 
