@@ -777,6 +777,14 @@ Prefab:
       propertyPath: moveSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4124071956521786, guid: b803587f79610ed42a6f5b060a17b733, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124071956521786, guid: b803587f79610ed42a6f5b060a17b733, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b803587f79610ed42a6f5b060a17b733, type: 2}
   m_IsPrefabAsset: 0
